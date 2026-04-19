@@ -36,7 +36,7 @@
           stompClient.subscribe('/topic/messages', function(message) {
               var body = JSON.parse(message.body);
               var div = document.createElement('div');
-              div.textContent = body.sender + ': ' + body.content;
+              div.textContent = '[' + body.timestamp + '] ' + body.sender + ': ' + body.content;
               document.getElementById('messages').appendChild(div);
           });
       });
