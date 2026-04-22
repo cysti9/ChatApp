@@ -39,7 +39,7 @@ public class JwtUtil {
                 .getPayload();
     }
 
-    public boolean isTokeValid(String token){
+    public boolean isTokenValid(String token){
         try {
             getClaims(token);
             return true;
